@@ -10,10 +10,10 @@ hero:
   actions:
     - theme: brand
       text: 开始游戏
-      link: /markdown-examples
+      link: /pages/user-begin.md
     - theme: alt
-      text: 社区
-      link: /api-examples
+      text: 支持我们
+      link: /pages/game/helpserver.md
 
 features:
   - title: 原版生存
