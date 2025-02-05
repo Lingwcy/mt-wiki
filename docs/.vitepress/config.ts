@@ -1,5 +1,4 @@
 import { defineConfig } from 'vitepress'
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'MiaoTown-WiKi',
@@ -33,12 +32,8 @@ export default defineConfig({
           { text: '免费获取游戏币', link: '/pages/game/helpserver.md' },
           { text: '常见问题解答', link: 'pages/common-question' },
         ],
-      }
+      },
     ],
-    logo: {
-      dark: '../assets/logo2.jpg',
-      light: '../assets/logo.jpg',
-    },
     socialLinks: [{ icon: 'github', link: 'https://github.com/Lingwcy?tab=repositories' }],
   },
 })

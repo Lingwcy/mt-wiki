@@ -6,9 +6,6 @@ hero:
   name: 'MiaoTown-WIKI'
   text: '喵镇百科'
   tagline: 'Minecraft 服务器'
-  image:
-    src: assets\background.png
-    alt: VitePress
 
   actions:
     - theme: brand
