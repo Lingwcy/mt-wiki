@@ -29,6 +29,7 @@ export default defineConfig({
           { text: '领地教程合集', link: '/pages/game/lands.md' },
           { text: '魔法教程合集', link: '/pages/game/magic.md' },
           { text: '粘液科技', link: '/pages/game/silmefun.md' },
+          { text: '装备强化', link: '/pages/game/qianghua.md' },
           { text: '免费获取游戏币', link: '/pages/game/helpserver.md' },
           { text: '常见问题解答', link: 'pages/common-question' },
         ],
