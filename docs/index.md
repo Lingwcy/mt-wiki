@@ -6,10 +6,11 @@ hero:
   name: 'MiaoTown-WIKI'
   text: '喵镇百科'
   tagline: 'Minecraft 服务器'
-
+  image:
+    src: ../assets/background.png
   actions:
     - theme: brand
-      text: 开始游戏
+      text: 游戏百科
       link: /pages/user-begin.md
     - theme: alt
       text: 支持我们
