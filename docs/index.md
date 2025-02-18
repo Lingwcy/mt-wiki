@@ -7,7 +7,7 @@ hero:
   text: '喵镇百科'
   tagline: 'Minecraft 服务器'
   image:
-    src: ../assets/background.png
+    src: background.png
   actions:
     - theme: brand
       text: 游戏百科
