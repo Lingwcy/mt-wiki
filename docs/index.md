@@ -1,6 +1,8 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
+
+title: 喵镇纯净
+titleTemplate: Minecraft服务器
 
 hero:
   name: 'MiaoTown-VI'
@@ -24,3 +26,12 @@ features:
   - title: 老牌原创服
     details: 自 2017 年开服以来，我们用心经营，一草一木皆成风景，为你打造独一无二的 Minecraft 家园。
 ---
+---
+
+<HomeUnderline />
+
+
+<confetti />
+
+<busuanzi />
+
