@@ -14,18 +14,15 @@ setTimeout(function () { visible.value = false }, 5000);
 
     <div v-if="visible" class="notice">
 
-        <h3 class="notice-title">欢迎阅读</h3>
+        <h3 class="notice-title">请耐心等待</h3>
 
         <div class="notice-describe">
-            <p>本次更新：新公告样式</p>
+            <p></p>
             <p class="notice-domain">
                 <strong>
-                    详细教程：<a href="https://vitepress.yiov.top/layout.html#%E5%85%AC%E5%91%8A"
-                        target="_blank">vitepress.yiov.top</a>
+                    本站点由Vercel托管，站点位于海外，初次加载可能会耗费些许时间。
                 </strong>
             </p>
-            <p>QQ 频道：******(无效二维码)</p>
-            <img class="notice-img" src="/qrcode.png">
         </div>
 
         <div class="notice-footer">
