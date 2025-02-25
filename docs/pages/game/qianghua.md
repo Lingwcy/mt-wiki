@@ -1,6 +1,6 @@
 # 装备强化系统指南
 
-![强化](../../assets/qianghua.png)
+![强化](https://pic1.imgdb.cn/item/67bd855dd0e0a243d4050ec7.png)
 
 ## 目前已知BUG（重要）
 

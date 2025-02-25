@@ -7,13 +7,13 @@
 ## 系统商店
 
 系统商店可以直接在系统菜单中打开，系统商店支持购买与收购，几乎能够购买游戏内的任何道具。
-![系统商店](../../assets/system-shop1.png)
+![系统商店](https://pic1.imgdb.cn/item/67bd8555d0e0a243d4050eb5.png)
 
 ## 箱子商店
 箱子商店大概长图里的样子，一个 箱子 和一个 木牌，木牌上面有自动生成的信息。
 箱子商店属于实体商店，玩家可以利用箱子商店来建造属于自己的商店。
 
-![箱子商店1](../../assets/chest-shop.png)
+![箱子商店1](https://pic1.imgdb.cn/item/67bd8571d0e0a243d4050f1e.png)
 
 ::: tip
 出售型商店是指玩家可以购买这个商店里的物品，收购型商店是指玩家可以卖东西给这个商店。
@@ -22,10 +22,10 @@
 以创建出售型商店为例，其创建步骤如下：
 
 步骤一：假设你要卖 苹果 ，那么手里拿着 苹果 ，点一下箱子（大小箱子都可以），聊天框会弹出下图所示的信息。
-![箱子商店2](https://dripdrop.wiki/pics/quickshop/shopcreate1.png)
+![箱子商店2](https://pic1.imgdb.cn/item/67bd85d0d0e0a243d4051071.png)
 步骤二：输入你想定的 苹果 单价（注意是单价）。比如输入 10 ，此时箱子上会自动生成一个木牌
 
-![箱子商店3](https://dripdrop.wiki/pics/quickshop/shopcreate2.png)
+![箱子商店3](https://pic1.imgdb.cn/item/67bd85d0d0e0a243d4051073.png)
 
 第 1 行标注了 商店的主人游戏 ID
 第 2 行标注了 出售 / 销售 以及 库存
@@ -34,12 +34,12 @@
 
 步骤三：你将想卖的 苹果 放入箱子中，就变成了库存，商店到这一步就创建成功了。
 
-![箱子商店4](https://dripdrop.wiki/pics/quickshop/shopcreate3.png)
+![箱子商店4](https://pic1.imgdb.cn/item/67bd85d0d0e0a243d4051074.png)
 
 步骤四：更改商店的类型：游戏准星对准任意一个箱子商店，通过指令 /qs buy 指令切换当前箱子商店为收购，通过指令 /qs sell 指令切换当前箱子商店为出售。
 
 最后: 使用 /qs help 来查看所有相关指令，你需要准心对准商店木牌才能更改其功能：
-![箱子商店4](https://dripdrop.wiki/pics/shop_qs%202024.4.15.png)
+![箱子商店4](https://pic1.imgdb.cn/item/67bd85d1d0e0a243d4051077.png)
 ## 跳蚤市场(即将开放)
 
 跳蚤市场允许玩家在菜单直接上架寄售物品。
