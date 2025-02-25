@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: 'MiaoTown-WIKI'
-  text: '喵镇百科'
-  tagline: 'Minecraft 服务器'
+  name: 'MiaoTown-VI'
+  text: '喵镇纯净'
+  tagline: '精进 Minecraft 服务器（2017 - 2025）'
   image:
     src: background.png
   actions:

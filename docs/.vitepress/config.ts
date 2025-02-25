@@ -1,8 +1,8 @@
 import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'MiaoTown-WiKi',
-  description: '喵镇百科',
+  title: 'MiaoTown-VI',
+  description: '喵镇纯净',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -17,6 +17,7 @@ export default defineConfig({
         items: [
           { text: '玩家须知', link: '/pages/user-begin.md' },
           { text: '服务器规则', link: '/pages/user-rule.md' },
+          { text: '服务器信息', link: '/pages/server-info.md' },
           { text: '使用Java版加入游戏', link: '/pages/java-begin.md' },
           { text: '使用基岩版加入游戏', link: '/pages/bedrock-begin.md' },
         ],
