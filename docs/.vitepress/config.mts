@@ -11,7 +11,14 @@ export default (defineConfig({
   description: "喵镇纯净",
 
   // #region fav
-  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['script', { src: '/js/minecraft-skin-viewer.js', defer: 'true', type: 'text/javascript' }],
+    ['script', { src: '/js/team-details.js', defer: 'false', type: 'text/javascript' }], // 将defer改为false，确保脚本立即加载
+    ['link', { rel: 'stylesheet', href: '/css/custom.css' }],
+    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap' }],
+    ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css' }]
+  ],
   // #endregion fav
 
   base: '/', //网站部署到github的vitepress这个仓库里
@@ -127,7 +134,6 @@ export default (defineConfig({
           { text: '服务器规则', link: '/pages/user-rule.md' },
           { text: '服务器信息', link: '/pages/server-info.md' },
           { text: '使用Java版加入游戏', link: '/pages/java-begin.md' },
-          { text: '使用基岩版加入游戏', link: '/pages/bedrock-begin.md' },
         ],
       },
       {
@@ -144,6 +150,7 @@ export default (defineConfig({
           { text: '装备强化', link: '/pages/game/qianghua.md' },
           { text: '免费获取游戏币', link: '/pages/game/helpserver.md' },
           { text: '常见问题解答', link: 'pages/common-question' },
+          { text: '运营团队', link: 'pages/team.md' },
         ],
       },
       {

@@ -1,0 +1,387 @@
+:root {
+  /* 基础颜色变量 */
+  --mc-green: #43A047;
+  --mc-blue: #1E88E5;
+  --mc-red: #E53935;
+  --mc-purple: #8E24AA;
+  --mc-yellow: #FFB300;
+  --mc-gray: #757575;
+
+  /* 组件颜色 */
+  --card-border-radius: 8px;
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --hover-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* 全局排版优化 */
+body {
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* 全局卡片样式 */
+.mc-card {
+  background: var(--vp-c-bg-soft);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 1.25rem;  /* 减少内边距 */
+  margin-bottom: 1.25rem; /* 减少底部边距 */
+  transition: var(--hover-transition);
+}
+
+.mc-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* 美化信息提示框 */
+.vp-doc div[class*='language-'] {
+  border-radius: var(--card-border-radius);
+  margin: 1rem 0;
+}
+
+.vp-doc .custom-block {
+  border-radius: var(--card-border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin: 1.5rem 0;
+  transition: var(--hover-transition);
+}
+
+.vp-doc .custom-block:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* 美化标题 - 减少顶部空间 */
+.vp-doc h1 {
+  font-size: 2.2rem;
+  margin-top: 0.5rem;  /* 减少顶部空间 */
+  margin-bottom: 1.25rem; /* 稍微减少底部空间 */
+  background: linear-gradient(90deg, var(--vp-c-brand), var(--vp-c-brand-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: slideInUp 0.5s ease-out;
+}
+
+.vp-doc h2 {
+  border-left: 4px solid var(--vp-c-brand);
+  padding-left: 0.8rem;
+}
+
+/* 美化表格 */
+.vp-doc table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--card-border-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  margin: 1.5rem 0;
+}
+
+.vp-doc tr:nth-child(2n) {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.vp-doc th {
+  font-weight: 600;
+  background-color: var(--vp-c-bg-soft);
+}
+
+.vp-doc th, .vp-doc td {
+  padding: 0.75rem 1rem;
+}
+
+/* 美化分割线 */
+.vp-doc hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--vp-c-divider), transparent);
+  margin: 1.25rem 0;
+}
+
+/* 美化列表 */
+.vp-doc ul, .vp-doc ol {
+  padding-left: 1.5rem;
+}
+
+.vp-doc ul li::marker {
+  color: var(--mc-green);
+}
+
+.vp-doc ol li::marker {
+  color: var(--mc-blue);
+}
+
+/* 功能卡片 */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--vp-c-bg-soft);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+  transition: var(--hover-transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--vp-c-brand);
+}
+
+.feature-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.feature-desc {
+  color: var(--vp-c-text-2);
+  flex-grow: 1;
+}
+
+/* 动画效果 */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .vp-doc h1 {
+    font-size: 2rem;
+  }
+  
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mc-card {
+    padding: 1rem;
+  }
+}
+
+/* 美化徽章 */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.badge-green {
+  background: var(--mc-green);
+  color: white;
+}
+
+.badge-blue {
+  background: var(--mc-blue);
+  color: white;
+}
+
+.badge-red {
+  background: var(--mc-red);
+  color: white;
+}
+
+.badge-purple {
+  background: var(--mc-purple);
+  color: white;
+}
+
+.badge-yellow {
+  background: var(--mc-yellow);
+  color: black;
+}
+
+.badge-gray {
+  background: var(--mc-gray);
+  color: white;
+}
+
+/* 改进团队页面样式 */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.team-card {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--card-border-radius);
+  overflow: hidden;
+  transition: var(--hover-transition);
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* 确保模态框正常显示 */
+.team-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999; /* 增加z-index确保在最上层 */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.team-modal-content {
+  position: relative;
+  background-color: var(--vp-c-bg);
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: var(--card-border-radius);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 800px;
+}
+
+/* 明确设置按钮样式确保可点击 */
+.team-details-btn {
+  display: inline-block;
+  background-color: var(--mc-green);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.team-details-btn:hover {
+  background-color: var(--mc-blue);
+  transform: translateY(-2px);
+}
+
+.team-details-btn:active {
+  transform: translateY(0);
+}
+
+.view-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.view-toggle button {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: var(--hover-transition);
+}
+
+.view-toggle button.active {
+  background: var(--mc-green);
+  color: white;
+  border-color: var(--mc-green);
+}
+
+/* 美化服务器信息页面 */
+.server-info-grid {
+  margin: 2rem 0;
+}
+
+.server-info-card {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--card-border-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.card-header {
+  background: linear-gradient(90deg, var(--vp-c-brand), var(--vp-c-brand-light));
+  color: white;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+}
+
+.limit-info {
+  margin: 1rem 0;
+}
+
+.limit-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* 页面进入动画 */
+.page-enter {
+  display: none;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 修复页面布局和间距 */
+.VPContent.has-sidebar {
+  padding-top: 0 !important;
+}
+
+/* 调整侧边栏和内容的位置 */
+.VPSidebar {
+  padding-top: 0rem !重要;
+}
+
+/* 调整内容区域的容器边距 */
+.vp-doc > div > *:first-child {
+  margin-top: 0 !important;
+}
+
+/* 减少嵌套块元素之间的间距 */
+.vp-doc > div > div {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+
+
+/* 修复导航栏遮挡logo的问题 */
+.VPSidebar {
+  /* 调整侧边栏的起始位置，确保不会覆盖顶部的logo */
+  top: 3px !important; /* 增加顶部边距，为logo留出足够空间 */
+}
+
+
+
