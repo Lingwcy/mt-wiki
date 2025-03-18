@@ -151,6 +151,7 @@ export default (defineConfig({
           { text: '免费获取游戏币', link: '/pages/game/helpserver.md' },
           { text: '常见问题解答', link: 'pages/common-question' },
           { text: '运营团队', link: 'pages/team.md' },
+          { text: '加入我们', link: 'pages/recruitment.md' },
         ],
       },
       {
