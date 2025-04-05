@@ -155,6 +155,13 @@ export default (defineConfig({
         ],
       },
       {
+        text: '建筑鉴赏',
+        collapsed: false,
+        items: [
+          { text: '玩家建筑', link: '/pages/game/player_building.md' },
+        ],
+      },
+      {
         text: '贡献攻略/教程',
         collapsed: false,
         items: [
@@ -203,11 +210,6 @@ export default (defineConfig({
 
 
 
-
-    //页脚
-    footer: {
-      copyright: `MiaoTown Copyright © 2017-${new Date().getFullYear()}`,
-    },
 
 
     //侧边栏文字更改(移动端)

@@ -17,8 +17,8 @@
             <td><code class="badge badge-red">困难</code></td>
           </tr>
           <tr>
-            <td>🏆 模式</td>
-            <td><code class="badge badge-blue">生存</code></td>
+            <td>🏆 状态</td>
+            <td><code class="badge badge-blue">公益</code></td>
           </tr>
           <tr>
             <td>🔑 是否需要正版</td>
