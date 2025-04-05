@@ -29,7 +29,7 @@
           <img src="https://pic1.imgdb.cn/item/67bd841ad0e0a243d40509b1.png" alt="主视图" class="main-image">
         </div>
         <div class="gallery-thumbs">
-          <img src="https://pic1.imgdb.cn/item/67bd841ad0e0a243d40509b1.png" alt="视图1" class="thumb active" onclick="changeMainImage(this)">
+          <img src="https://pic1.imgdb.cn/item/67bd841ad0e0a243d40509b1.png" alt="视图1" class="thumb active">
         </div>
       </div>
     </div>
@@ -54,7 +54,7 @@
           <img src="https://pic1.imgdb.cn/item/67f13cd30ba3d5a1d7ede74e.jpg" alt="百外主视图" class="main-image">
         </div>
         <div class="gallery-thumbs">
-                          <img src="https://pic1.imgdb.cn/item/67f13cd30ba3d5a1d7ede74e.jpg" alt="视图1" class="thumb active" onclick="changeMainImage(this)">
+          <img src="https://pic1.imgdb.cn/item/67f13cd30ba3d5a1d7ede74e.jpg" alt="视图1" class="thumb active">
         </div>
       </div>
     </div>
@@ -79,7 +79,7 @@
           <img src="https://pic1.imgdb.cn/item/67f144990ba3d5a1d7edea9d.jpg" alt="主视图" class="main-image">
         </div>
         <div class="gallery-thumbs">
-                  <img src="https://pic1.imgdb.cn/item/67f144990ba3d5a1d7edea9d.jpg" alt="视图1" class="thumb active" onclick="changeMainImage(this)">
+          <img src="https://pic1.imgdb.cn/item/67f144990ba3d5a1d7edea9d.jpg" alt="视图1" class="thumb active">
         </div>
       </div>
     </div>
@@ -108,25 +108,31 @@
   </div>
 </div>
 
-<script>
-// 切换主图片的函数
-function changeMainImage(thumbEl) {
-  // 获取所有缩略图和当前画廊的主图片元素
-  const galleryContainer = thumbEl.closest('.gallery-container');
-  const mainImage = galleryContainer.querySelector('.main-image');
-  const thumbs = galleryContainer.querySelectorAll('.thumb');
-  
-  // 更新主图片
-  mainImage.src = thumbEl.src;
-  mainImage.alt = thumbEl.alt;
-  
-  // 更新缩略图激活状态
-  thumbs.forEach(thumb => thumb.classList.remove('active'));
-  thumbEl.classList.add('active');
-}
+<script setup>
+import { onMounted } from 'vue'
 
-// 添加建筑类型过滤功能
-document.addEventListener('DOMContentLoaded', function() {
+// Only run in client side
+onMounted(() => {
+  console.log('Script loaded and DOM mounted');
+  
+  // 切换主图片的函数
+  window.changeMainImage = function(thumbEl) {
+    console.log('changeMainImage called for', thumbEl.src);
+    // 获取所有缩略图和当前画廊的主图片元素
+    const galleryContainer = thumbEl.closest('.gallery-container');
+    const mainImage = galleryContainer.querySelector('.main-image');
+    const thumbs = galleryContainer.querySelectorAll('.thumb');
+    
+    // 更新主图片
+    mainImage.src = thumbEl.src;
+    mainImage.alt = thumbEl.alt;
+    
+    // 更新缩略图激活状态
+    thumbs.forEach(thumb => thumb.classList.remove('active'));
+    thumbEl.classList.add('active');
+  }
+
+  // 添加建筑类型过滤功能
   const filterBtns = document.querySelectorAll('.filter-btn');
   const buildingCards = document.querySelectorAll('.building-card');
   
@@ -156,24 +162,58 @@ document.addEventListener('DOMContentLoaded', function() {
   const lightboxCaption = document.getElementById('lightbox-caption');
   const lightboxClose = document.querySelector('.lightbox-close');
   
-  // 为所有图库中的图片添加点击事件
-  const allGalleryImages = document.querySelectorAll('.main-image, .thumb');
-  allGalleryImages.forEach(img => {
+  // 只为主图片添加点击事件，不为缩略图添加
+  const mainImages = document.querySelectorAll('.main-image');
+  mainImages.forEach(img => {
     img.addEventListener('click', function(e) {
-      // 如果是缩略图点击，先执行原有的changeMainImage函数
-      if (this.classList.contains('thumb')) {
-        changeMainImage(this);
-        // 阻止事件冒泡，避免立即触发灯箱
-        e.stopPropagation();
-        return;
-      }
-      
       // 打开灯箱并显示图片
+      e.stopPropagation(); // 阻止事件冒泡
       lightboxImg.src = this.src;
       lightboxCaption.textContent = this.alt;
       lightbox.style.display = 'flex';
       document.body.style.overflow = 'hidden'; // 防止背景滚动
     });
+  });
+  
+  // 直接使用更可靠的方法为缩略图添加点击事件
+  function setupThumbnailClicks() {
+    console.log('Setting up thumbnail clicks');
+    
+    // 查找所有缩略图
+    const thumbs = document.querySelectorAll('.thumb');
+    console.log('Found', thumbs.length, 'thumbnails');
+    
+    // 为每个缩略图添加点击处理
+    thumbs.forEach((thumb, index) => {
+      // 移除旧的事件监听器（如果有）
+      thumb.removeEventListener('click', thumbnailClickHandler);
+      
+      // 添加新的事件监听器
+      thumb.addEventListener('click', thumbnailClickHandler);
+      console.log('Added click handler to thumbnail', index + 1);
+    });
+  }
+  
+  // 缩略图点击处理函数
+  function thumbnailClickHandler(e) {
+    console.log('Thumbnail clicked:', this.src);
+    e.preventDefault();
+    e.stopPropagation();
+    window.changeMainImage(this);
+  }
+  
+  // 首次设置
+  setupThumbnailClicks();
+  
+  // 如果有动态添加的缩略图，可以在需要时重新运行 setupThumbnailClicks()
+  
+  // 也直接添加内联事件处理 - 备用方法
+  document.querySelectorAll('.thumb').forEach(thumb => {
+    thumb.onclick = function(e) {
+      e.stopPropagation();
+      window.changeMainImage(this);
+      return false;
+    };
   });
   
   // 点击关闭按钮关闭灯箱
@@ -197,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function() {
       document.body.style.overflow = 'auto';
     }
   });
-});
+})
 </script>
 
 <style>

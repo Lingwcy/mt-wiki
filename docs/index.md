@@ -16,7 +16,7 @@ hero:
       link: /pages/user-begin.md
     - theme: alt
       text: 玩家建筑
-      link: /pages/game/helpserver.md
+      link: /pages/game/player_building.md
 
 features:
   - title: 原版生存
