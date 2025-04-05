@@ -55,6 +55,7 @@
         </div>
         <div class="gallery-thumbs">
           <img src="https://pic1.imgdb.cn/item/67f13cd30ba3d5a1d7ede74e.jpg" alt="视图1" class="thumb active">
+                    <img src="https://pic1.imgdb.cn/item/67f153740ba3d5a1d7edf1a1.jpg" alt="视图2" class="thumb active">
         </div>
       </div>
     </div>
