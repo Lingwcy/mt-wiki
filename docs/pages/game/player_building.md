@@ -162,15 +162,30 @@ onMounted(() => {
   const lightboxCaption = document.getElementById('lightbox-caption');
   const lightboxClose = document.querySelector('.lightbox-close');
   
-  // 只为主图片添加点击事件，不为缩略图添加
+  // 为主图片添加点击事件，确保一次点击就能达到最大尺寸
   const mainImages = document.querySelectorAll('.main-image');
   mainImages.forEach(img => {
     img.addEventListener('click', function(e) {
       // 打开灯箱并显示图片
       e.stopPropagation(); // 阻止事件冒泡
-      lightboxImg.src = this.src;
+      
+      // 预加载图片以确保获得完整尺寸
+      const fullImg = new Image();
+      fullImg.onload = function() {
+        // 图片加载完成后设置到灯箱
+        lightboxImg.src = fullImg.src;
+        lightboxImg.style.maxWidth = '100%';
+        lightboxImg.style.maxHeight = '80vh';
+        lightboxImg.style.width = 'auto';
+        lightboxImg.style.height = 'auto';
+        
+        // 显示灯箱
+        lightbox.style.display = 'flex';
+      };
+      fullImg.src = this.src;
+      
+      // 设置标题
       lightboxCaption.textContent = this.alt;
-      lightbox.style.display = 'flex';
       document.body.style.overflow = 'hidden'; // 防止背景滚动
     });
   });
@@ -438,41 +453,38 @@ onMounted(() => {
 
 .lightbox-content {
   position: relative;
-  max-width: 90%;
+  max-width: 85%; /* 增加最大宽度比例 */
   max-height: 90%;
-  animation: zoom 0.3s ease;
+  margin: 0 auto; /* 确保内容居中 */
+  animation: zoom 0.25s ease-out;
+  /* 对于VitePress侧边栏，添加合适的左侧补偿 */
+  margin-left: min(calc(var(--vp-sidebar-width, 12%) / 2), 150px);
+  /* 增加灯箱内容区的最小宽度 */
+  min-width: 50%;
 }
 
 @keyframes zoom {
-  from {transform: scale(0.1)}
-  to {transform: scale(1)}
+  from {transform: scale(0.5); opacity: 0.8;}
+  to {transform: scale(1); opacity: 1;}
 }
 
 .lightbox-img {
   display: block;
   max-width: 100%;
-  max-height: 80vh;
+  max-height: 85vh; /* 增加最大高度比例 */
+  width: auto;
+  height: auto;
   object-fit: contain;
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 4px;
 }
 
-.lightbox-caption {
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  font-size: 1rem;
-}
-
-.lightbox-close {
-  position: absolute;
-  top: -30px;
-  right: 0;
-  color: white;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 1001;
+/* 响应式调整，在小屏幕上不需要边距 */
+@media (max-width: 960px) {
+  .lightbox-content {
+    margin-left: auto;
+    max-width: 90%;
+  }
 }
 
 /* 添加指针样式，提示图片可点击 */

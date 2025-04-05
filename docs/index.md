@@ -8,8 +8,7 @@ hero:
   name: 'MiaoTown-VI'
   text: '喵镇纯净'
   tagline: '精进 Minecraft 服务器（2017 - 2025）'
-  image:
-    src: https://pic1.imgdb.cn/item/67bd841ad0e0a243d40509b1.png
+
   actions:
     - theme: brand
       text: 游戏百科
@@ -85,10 +84,6 @@ features:
   text-shadow: var(--tagline-shadow);
 }
 
-/* 隐藏原始的右侧图片 */
-.VPHomeHero .image-container {
-  display: none !important;
-}
 
 /* 特性部分的背景 - 改为透明 */
 .VPFeatures {
