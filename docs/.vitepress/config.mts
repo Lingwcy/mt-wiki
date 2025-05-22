@@ -168,6 +168,13 @@ export default (defineConfig({
           { text: '如何参与', link: '/pages/github.md' },
         ],
       },
+      {
+        text: '手稿',
+        collapsed: false,
+        items: [
+          { text: 'SAM-CP可组合提示-统一亲和力框架', link: '/pages/paper/sam-cp.md' },
+        ],
+      }
 
     ],
 
