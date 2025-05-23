@@ -173,6 +173,7 @@ export default (defineConfig({
         collapsed: false,
         items: [
           { text: 'SAM-CP可组合提示-统一亲和力框架', link: '/pages/paper/sam-cp.md' },
+          { text: 'VIT-DET继承自原始VIT权重的目标检测网络', link: '/pages/paper/vitdet.md' }
         ],
       }
 
