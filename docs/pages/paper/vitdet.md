@@ -1,5 +1,5 @@
-# VIT-DET -- 继承自原始VIT权重的目标检测网络
-![alt text](https://img-blog.csdnimg.cn/933c287a1c764d8b8109d7a66df7fe5f.png)
+# VIT-DET -- 继承自原始VIT权重的目标检测网络[ICCV 2022]
+![alt text](https://pic1.imgdb.cn/item/6830728c58cb8da5c80aac17.png)
 ## 前置知识
 >**Neck（颈部）**
 神经网络中的某一个特定模块,用于注入某一特定任务（目标检测、分割）所需要的先验知识（detection-specific prior knowledge），位于Backbone（骨干网络）和Head（头部）之间，​​并非所有模型都有显式Neck结构​​（如某些简单分类模型可能直接连接Backbone和Head）经典的Neck：例如FPN网络，通过多尺度特征融合，这对检测不同尺度物体有很大作用，Neck与backbone不同，骨干网常用来作为通用特征提取，适应于各种不同任务。
