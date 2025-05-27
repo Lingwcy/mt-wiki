@@ -173,7 +173,8 @@ export default (defineConfig({
         collapsed: false,
         items: [
           { text: 'SAM-CP可组合提示-统一亲和力框架', link: '/pages/paper/sam-cp.md' },
-          { text: 'VIT-DET继承自原始VIT权重的目标检测网络', link: '/pages/paper/vitdet.md' }
+          { text: 'VIT-DET继承自原始VIT权重的目标检测网络', link: '/pages/paper/vitdet.md' },
+          { text: '一种基于交互式的提示网络，用于基于无人机图像的城市洪涝区域', link: '/pages/paper/一种基于交互式的提示网络，用于基于无人机图像的城市洪涝区域.md' }
         ],
       }
 
