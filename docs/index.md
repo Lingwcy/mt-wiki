@@ -6,7 +6,7 @@ titleTemplate: Minecraft服务器
 
 hero:
   name: 'MiaoTown-VI'
-  text: '喵镇纯净'
+  text: '喵镇纯净（暂停 - 服务器搬迁中...）'
   tagline: '精进 Minecraft 服务器（2017 - 2025）'
 
   actions:
