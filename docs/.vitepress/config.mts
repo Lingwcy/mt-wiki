@@ -131,7 +131,8 @@ export default (defineConfig({
         collapsed: false,
         items: [
           { text: '玩家须知', link: '/pages/user-begin.md' },
-          { text: '服务器规则', link: '/pages/user-rule.md' },
+          { text: '生存服设定', link: '/pages/suriver-rule.md' },
+          { text: '游玩规范', link: '/pages/user-rule.md' },
           { text: '服务器信息', link: '/pages/server-info.md' },
           { text: '使用Java版加入游戏', link: '/pages/java-begin.md' },
         ],

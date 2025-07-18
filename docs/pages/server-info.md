@@ -10,15 +10,11 @@
         <tbody>
           <tr>
             <td>📋 版本</td>
-            <td><code class="badge badge-green">1.21.4</code></td>
+            <td><code class="badge badge-green">1.21.5</code></td>
           </tr>
           <tr>
             <td>💀 难度</td>
             <td><code class="badge badge-red">困难</code></td>
-          </tr>
-          <tr>
-            <td>🏆 状态</td>
-            <td><code class="badge badge-blue">公益</code></td>
           </tr>
           <tr>
             <td>🔑 是否需要正版</td>
@@ -63,7 +59,7 @@
       <div class="stat-item">
         <div class="stat-icon">🧠</div>
         <div class="stat-label">内存</div>
-        <div class="stat-value">16GB</div>
+        <div class="stat-value">32GB</div>
       </div>
       <div class="stat-item">
         <div class="stat-icon">💻</div>
@@ -78,7 +74,7 @@
       <div class="stat-item">
         <div class="stat-icon">🔌</div>
         <div class="stat-label">网络</div>
-        <div class="stat-value">千兆宽带</div>
+        <div class="stat-value">杭州</div>
       </div>
     </div>
   </div>
