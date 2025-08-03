@@ -14,8 +14,8 @@ hero:
       text: 游戏百科
       link: /pages/user-begin.md
     - theme: alt
-      text: 玩家建筑
-      link: /pages/game/player_building.md
+      text: 鸣谢
+      link: /pages/thanks.md
 
 features:
   - title: 原版生存
