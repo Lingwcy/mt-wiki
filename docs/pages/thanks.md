@@ -1,6 +1,5 @@
 # 鸣谢
 
-> *"一个人可以走得很快，但一群人可以走得更远。"*
 
 ## 特此鸣谢 （排名不分先后）
 
@@ -34,6 +33,16 @@
 <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
 <img src="https://api.mineatar.io/head/73702cb2-b851-41e7-802d-6049af99d7de?scale=2" alt="LoverHan" style="width: 32px; height: 32px; margin-right: 10px; border-radius: 4px;">
 <span><strong>LoverHan</strong> - 建筑维护</span>
+</div>
+
+<div style="display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+<img src="https://api.mineatar.io/head/e8beb317-2ab5-41c3-8cdc-5ac36c95e48d?scale=2" alt="crass" style="width: 32px; height: 32px; margin-right: 10px; border-radius: 4px;">
+<span><strong>crass</strong> - 赞助 50 软妹币</span>
+</div>
+
+<div style="display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+<img src="https://api.mineatar.io/head/d64638cb-913e-4c42-ba9b-363a0777479e?scale=2" alt="GreamCpr" style="width: 32px; height: 32px; margin-right: 10px; border-radius: 4px;">
+<span><strong>GreamCpr</strong> - 赞助 100 软妹币</span>
 </div>
 
 </div>
