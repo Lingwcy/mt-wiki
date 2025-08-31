@@ -175,6 +175,8 @@ export default (defineConfig({
         items: [
           { text: '2025年8月28日', link: '/pages/chat/chat2025-8-28.md' },
           { text: '2025年8月29日', link: '/pages/chat/chat2025-8-29.md' },
+          { text: '2025年8月30日', link: '/pages/chat/chat2025-8-30.md' },
+          { text: '2025年8月31日', link: '/pages/chat/chat2025-8-31.md' },
         ],
       }
 
