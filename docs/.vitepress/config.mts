@@ -63,9 +63,9 @@ export default (defineConfig({
         return htmlResult
       },
 
-      md.use(groupIconMdPlugin) //代码组图标
+        md.use(groupIconMdPlugin) //代码组图标
       md.use(markdownItTaskCheckbox) //todo
-      md.use(MermaidMarkdown); 
+      md.use(MermaidMarkdown);
 
     }
 
@@ -177,6 +177,11 @@ export default (defineConfig({
           { text: '2025年8月29日', link: '/pages/chat/chat2025-8-29.md' },
           { text: '2025年8月30日', link: '/pages/chat/chat2025-8-30.md' },
           { text: '2025年8月31日', link: '/pages/chat/chat2025-8-31.md' },
+          { text: '2025年9月1日', link: '/pages/chat/2025-9-1.md' },
+          { text: '2025年9月2日', link: '/pages/chat/2025-9-2.md' },
+          { text: '2025年9月3日', link: '/pages/chat/2025-9-3.md' },
+          { text: '2025年9月4日', link: '/pages/chat/2025-9-4.md' },
+          { text: '2025年9月5日', link: '/pages/chat/2025-9-5.md' },
         ],
       }
 
@@ -210,11 +215,11 @@ export default (defineConfig({
     socialLinks: [{ icon: 'github', link: 'https://github.com/Lingwcy?tab=repositories' }],
     //404页面的配置
     notFound: {
-    title: "页面未找到",
-    quote: "哎呀，您好像迷失在网络的小胡同里啦，别着急，赶紧回头是岸！",
-    linkText: "返回首页",
+      title: "页面未找到",
+      quote: "哎呀，您好像迷失在网络的小胡同里啦，别着急，赶紧回头是岸！",
+      linkText: "返回首页",
     },
-  
+
 
     //手机端深浅模式文字修改
     darkModeSwitchLabel: '深浅模式',
